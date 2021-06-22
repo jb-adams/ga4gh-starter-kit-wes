@@ -1,8 +1,7 @@
 package org.ga4gh.starterkit.wes.controller;
 
-import org.ga4gh.starterkit.wes.app.WesStandaloneServer;
-import org.ga4gh.starterkit.wes.app.WesStandaloneSpringConfig;
-import org.ga4gh.starterkit.wes.beanconfig.StarterKitWesSpringConfig;
+import org.ga4gh.starterkit.wes.app.WesServer;
+import org.ga4gh.starterkit.wes.app.WesServerSpringConfig;
 import org.ga4gh.starterkit.wes.testutils.ResourceLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,9 +22,8 @@ import static org.ga4gh.starterkit.wes.constant.WesApiConstants.WES_API_V1;
 
 @SpringBootTest
 @ContextConfiguration(classes = {
-    WesStandaloneServer.class,
-    WesStandaloneSpringConfig.class,
-    StarterKitWesSpringConfig.class,
+    WesServer.class,
+    WesServerSpringConfig.class,
     WesServiceInfo.class
 })
 @WebAppConfiguration
